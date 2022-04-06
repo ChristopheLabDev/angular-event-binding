@@ -1,0 +1,31 @@
+<h1>Série Exercices Event Binding</h1>
+
+<p>Lier l'evenement click à la méthode changeTitle sur le bouton 1</p>
+<div [title]="monTitre">Survole pour voir le titre</div>
+<button (click)="changeTitle()">Bouton 1</button>
+<hr />
+
+<p>
+  Créer puis lier la méthode showMessage à l'évenement click sur le bouton
+  Réveler (faire en sorte de modifier la valeur de la propriété estCache pour
+  afficher le message lorsque la méthode showMessage est appelée)
+</p>
+<div [hidden]="estCacher">Message secret</div>
+<button (click)="showMessage()">Réveler</button>
+<hr />
+
+<p>
+  Lors du click sur l'image il faut changer la valeur de la propriété urlImage
+  avec l'url suivante : "https://www.fillmurray.com/100/100"
+</p>
+<img (click)="changeImage()" [src]="urlImage" alt="aucune image" />
+
+<hr />
+
+<p>
+  Ajouter un bouton + et un bouton - pour modifier la valeur afficher dans
+  l'input ci dessous
+</p>
+<button (click)="moreValue()">+</button>
+<button (click)="lessValue()">-</button>
+<input [value]="maValeur" type="number" />
